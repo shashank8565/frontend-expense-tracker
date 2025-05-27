@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DashboardLayout from "../../components/layouts/DashboardLayout";
+import DashboardLayout from "../../components/Layouts/DashboardLayout";
 
 import { LuHandCoins, LuWalletMinimal } from "react-icons/lu";
 import { IoMdCard } from "react-icons/io";
@@ -99,7 +99,9 @@ const Home = () => {
           />
 
           <RecentIncomeWithChart
-            data={dashboardData?.last60DaysIncome?.transactions?.slice(0,4) || []}
+            data={
+              dashboardData?.last60DaysIncome?.transactions?.slice(0, 4) || []
+            }
             totalIncome={dashboardData?.totalIncome || 0}
           />
 
